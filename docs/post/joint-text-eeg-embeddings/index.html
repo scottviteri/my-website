@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Scott Viteri">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Here is a proposal I pitched to the Emotiv EEG company, since they have a bunch of EEG data and infrastructure to pay customers to help with distributed data collection. They were interested but we ended up stopping short of having me work there for the summer.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://scottviteri.github.io/post/joint-text-eeg-embeddings/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#247BA0">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arapey:400,400i%7CKarla:400,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png">
+
+  <link rel="canonical" href="http://scottviteri.github.io/post/joint-text-eeg-embeddings/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Scott Viteri">
+  <meta property="og:url" content="http://scottviteri.github.io/post/joint-text-eeg-embeddings/">
+  <meta property="og:title" content="Joint Text-EEG Embeddings | Scott Viteri">
+  <meta property="og:description" content="Here is a proposal I pitched to the Emotiv EEG company, since they have a bunch of EEG data and infrastructure to pay customers to help with distributed data collection. They were interested but we ended up stopping short of having me work there for the summer."><meta property="og:image" content="http://scottviteri.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+  <meta property="twitter:image" content="http://scottviteri.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2023-06-24T11:34:12-07:00">
+    
+    <meta property="article:modified_time" content="2023-06-24T11:34:12-07:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://scottviteri.github.io/post/joint-text-eeg-embeddings/"
+  },
+  "headline": "Joint Text-EEG Embeddings",
+  
+  "datePublished": "2023-06-24T11:34:12-07:00",
+  "dateModified": "2023-06-24T11:34:12-07:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Scott Viteri"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Scott Viteri",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://scottviteri.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Here is a proposal I pitched to the Emotiv EEG company, since they have a bunch of EEG data and infrastructure to pay customers to help with distributed data collection. They were interested but we ended up stopping short of having me work there for the summer."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Joint Text-EEG Embeddings | Scott Viteri</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Scott Viteri</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Scott Viteri</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Joint Text-EEG Embeddings</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jun 24, 2023
+  </span>
+  
+
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    10 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Here is a proposal I pitched to the Emotiv EEG company, since they have a bunch of EEG data and infrastructure to pay customers to help with distributed data collection. They were interested but we ended up stopping short of having me work there for the summer.</p>
+<p>My motivation is that the main approach to AI alignment right now is RLHF, but one key limitation is the bandwidth constraint of humans ranking text generated by large language models. It would be nice to have joint text-eeg embeddings in order to increase that bandwidth. I think there are ways of doing this naively that would be pretty bad &ndash; for example, if we did RLHF based on people&rsquo;s internal reactions to a piece of text, I could see that optimizing to align with parts of ourselves that we don&rsquo;t identify with (eg stimula that are short-term pleasurable).</p>
+<p>But I think there is a version of this where we scale the amount of communication between AIs and people, as AIs become more direct personal assistants. I am consciously thinking about EEG as opposed to the more reasonable fMRI because EEG is much more likely to be integrated into everyday use, which can lead to much for data being collected, which has positive feedback effects. Also as far as I can tell, it hasn&rsquo;t really been tried with transformers before somehow.</p>
+<p>I have this broad intuition that more communication is good, but is is also possible in the short term for increased communication to lead to a smaller integral of total communication. I admit that sociopaths exist, and that generally speaking your don&rsquo;t want to give our your social security number which is indeed communication. Maybe a crux for communication is that in the process of sharing your concepts, you also share your values, since values are a particular kind of concept. I don&rsquo;t think Hitler is a good example for othogonality, because his values were not really disjoint from his conceptual structure of how the world works.</p>
+<p>In any event, there is probably a better version of the following proposal where you don&rsquo;t create a joint embedding space but rather use EEG embeddings to help a pretrained LM do better prediction of next word. I imagine this is a more reasonable task do to the low spatial resolution of EEG.</p>
+<h1 id="a-proposal-for-developing-a-joint-text-eeg-embedding-model-using-emotiv-eeg-headsets">A Proposal for Developing a Joint Text-EEG Embedding Model using Emotiv EEG Headsets</h1>
+<p><strong>Author: Scott Viteri</strong>
+<strong>Affiliation: Stanford University</strong>
+<strong>Date: March 27th, 2023</strong></p>
+<h2 id="introduction">Introduction</h2>
+<p>The goal of this project is to create a dataset and develop a joint text-EEG embedding model using Emotiv EEG headsets. This dataset will consist of pairs of language model completions and the corresponding EEG headset data when a participant reads those completions. By learning a joint EEG/text embedding space, we aim to align machine learning models with human values, allowing AI systems to better emulate human cognitive processes and values. Additionally, this project will provide an incentive for people to buy Emotiv headsets, as they can use the joint embedding model to fine-tune language models with their own data, creating a more personalized AI assistant.</p>
+<h2 id="emotivs-market-opportunity">Emotiv&rsquo;s Market Opportunity</h2>
+<p>The joint text-EEG embedding model developed using Emotiv EEG headsets has the potential to significantly increase the demand for Emotiv&rsquo;s products. If this joint embedding becomes generally available, it would provide a strong incentive for consumers to purchase Emotiv headsets, particularly those with an earbud form factor. The ability to fine-tune language models on their own thoughts using the embedding model and the headset would be a major selling point. By integrating the headset with smartphones or internet-connected devices, users could interact with language models in real-time using their thoughts as context, effectively creating a next-generation smart assistant experience. This innovation represents a natural progression from voice-based smart assistants, and the potential market size is vast.</p>
+<p>By collaborating with Emotiv, we can ensure that the joint text-EEG embedding model is optimized for use with their EEG headsets. This will create a unique value proposition for Emotiv&rsquo;s products, differentiating them from competitors and driving increased sales. Moreover, the success of this project could lead to further research and development opportunities, reinforcing Emotiv&rsquo;s position as a leader in the field of brain-computer interfaces and AI-driven technologies.</p>
+<h2 id="cost-estimation">Cost Estimation</h2>
+<p>The total cost estimation for this project is around $120K. This is broken down as follows:</p>
+<ol>
+<li>$50K for the joint brain/EEG embeddings</li>
+<li>$30K for an EEG predictive model</li>
+<li>$40K to pay for the project lead&rsquo;s summer internship</li>
+</ol>
+<p>These costs can be justified by the potential to further solidify Emotiv&rsquo;s position as a leader in the brain-computer interface field while opening up new avenues of innovation, connecting human thought to computers, AI, and each other in fundamentally different ways from before.</p>
+<h3 id="data-collection-cost">Data Collection Cost</h3>
+<p>We estimate that the cost per data point for labeling is $30/hr, assuming a labeler can read and label a paragraph within a minute. This results in 2 samples per dollar. To potentially reduce costs and increase participant engagement, we can consider allowing participants to choose their reading material. This can be achieved by providing a browser extension that displays one paragraph or sentence at a time or by hosting the interface on the Emotiv labs platform, where participants can input the URL of the content they want to read. While this approach might introduce some bias in the dataset, it could be worth it if we are participant-limited and can ensure a diverse set of readings, including content that elicits varying emotional responses.</p>
+<h3 id="number-of-data-points-and-model-training-cost">Number of Data Points and Model Training Cost</h3>
+<p>For the contrastive model, we would naively expect 400 million pairs, similar to the CLIP model, which would cost $200M to annotate. However, since we can use OpenAI&rsquo;s existing embedding model for the text to vector function, we might only need 100 million pairs, which would still cost</p>
+<p>$50M to annotate &ndash; an amount still out of range.</p>
+<p>To reduce costs, we can pretrain a model to predict the next EEG signals using existing data repositories. By removing the last layer(s) of this predictive model, we can use it as a starting point for the brain-to-vector function. This approach could save three orders of magnitude, putting the cost at $50K. However, we would need a good predictive model for future brain data based on past data. Estimating the difficulty of this task to be around the difficulty of language modeling, the cost for a baseline competence 110M parameter model would be about $30K (
+<a href="https://arxiv.org/abs/2004.08900%29" target="_blank" rel="noopener">https://arxiv.org/abs/2004.08900)</a>.</p>
+<h3 id="splitting-the-problem-pre-training-and-contrastive-training">Splitting the Problem: Pre-training and Contrastive Training</h3>
+<p>We split the problem into pre-training and contrastive training steps for several reasons. First, pre-training allows us to leverage existing data repositories to build a strong foundation for the brain-to-vector function at a lower cost. This step reduces the complexity of the problem and enables us to focus on learning a meaningful representation from brain data. Second, the contrastive training step refines the model to learn the joint embedding space between text and EEG data, ensuring that the model can effectively capture relevant information from both modalities. Splitting the problem this way facilitates a more efficient and cost-effective approach to developing the joint text-EEG embedding model.</p>
+<h3 id="incremental-spending">Incremental Spending</h3>
+<p>To reduce the risk of financial loss, the project can be executed incrementally, allowing for adjustments and the possibility of stopping data collection if necessary. The following strategies will be employed:</p>
+<ol>
+<li>Learn the predictive model of the EEG signal before starting human data collection.</li>
+<li>Use the EEG predictive model to create baselines and possibly cheaper ways to come up with translations between EEG and language.</li>
+<li>Train the contrastive model as data is collected, allowing for adjustments or stopping data collection if the model does not show progress.</li>
+</ol>
+<h2 id="data-collection-procedure">Data Collection Procedure</h2>
+<h3 id="participant-recruitment">Participant Recruitment</h3>
+<p>Recruit a diverse group of participants, ensuring a representative sample of different ages, genders, and cultural backgrounds. Obtain informed consent from all participants, and ensure they understand the purpose of the study and their right to withdraw at any time.</p>
+<h3 id="onsite-collection-protocol">Onsite Collection Protocol</h3>
+<ol>
+<li>Equip each participant with an Emotiv EEG headset, ensuring a comfortable fit and proper electrode placement. Use EEG headsets with multiple channels to capture a broader range of brain activity. Additionally, integrate the headset with a smartphone or computer application to facilitate real-time data collection and language model interaction.</li>
+<li>Prepare a diverse set of texts covering various topics and complexities to elicit a wide range of cognitive responses from participants. The texts can be generated by language models or curated from existing sources.</li>
+<li>Randomize the order of text presentations for each participant to minimize any order effects that may influence the EEG readings.</li>
+<li>For each participant, follow these steps:
+a. Present a text to the participant and ask them to read it silently.
+b. Record the participant&rsquo;s EEG data while they read the text.
+c. Store the (text, EEG data) pair securely.</li>
+<li>Repeat this process for several texts per participant, ensuring a sufficient number of (text, EEG data) pairs are collected.</li>
+<li>Store the data securely, anonymizing it to protect participant privacy.</li>
+</ol>
+<h3 id="remote-collection-protocol">Remote Collection Protocol</h3>
+<ol>
+<li>Equip each participant with an Emotiv EEG headset and integrate it with a browser extension or an interface hosted on the Emotiv labs platform.</li>
+<li>Allow participants to input the URL of the content they want to read, ensuring a diverse set of readings and a wide range of cognitive responses.</li>
+<li>Follow the data collection, preprocessing, and model training steps outlined in the Onsite Collection Procedure section.</li>
+<li>Monitor the dataset</li>
+</ol>
+<p>for biases and take corrective measures as needed to ensure a balanced representation of content and emotional responses.</p>
+<p>By implementing this data collection procedure, we can potentially reduce costs, increase participant engagement, and encourage a diverse range of readings. However, it is essential to be aware of potential biases and address them accordingly to ensure the quality and usefulness of the joint text-EEG embedding model.</p>
+<h2 id="model-training">Model Training</h2>
+<h3 id="eeg-data-preprocessing">EEG Data Preprocessing</h3>
+<ol>
+<li>Perform artifact removal and noise reduction on the collected EEG data to ensure high-quality signals for subsequent analysis.</li>
+<li>Apply Short-Time Fourier Transform (STFT) to the EEG data to generate spectrograms, converting time-domain signals into time-frequency representations. This process will help capture important features in the EEG data.</li>
+<li>Vertically stack the STFT signals from multiple EEG channels to create combined spectrogram representations.</li>
+</ol>
+<h3 id="model-training-and-evaluation">Model Training and Evaluation</h3>
+<ol>
+<li>Follow the methodology from MULAN: A Joint Embedding of Music Audio and Natural Language (Huang et al., 2022) as a reference for creating a joint EEG/text embedding model.</li>
+<li>Use a Vision Transformer (ViT) to process the combined STFT spectrograms and generate EEG signal embeddings.</li>
+<li>Train the model using contrastive loss to find a joint embedding space between the text data and the EEG data.</li>
+<li>Evaluate the model&rsquo;s performance using various metrics and qualitative analysis to ensure the model effectively captures meaningful information from both text and EEG data.</li>
+</ol>
+<h2 id="public-release-and-kaggle-competition">Public Release and Kaggle Competition</h2>
+<ol>
+<li>Prepare the dataset for public release, ensuring it complies with privacy regulations and ethical guidelines.</li>
+<li>Publish the initial joint text-EEG embedding model along with the dataset to provide a baseline for researchers and developers.</li>
+<li>Collaborate with Kaggle to organize a competition, encouraging participants to improve upon the initial model and explore novel applications of the joint embedding space.</li>
+</ol>
+<h2 id="summer-internship">Summer Internship</h2>
+<p>The proposer of this project, if accepted, would like to be considered for a summer internship at Emotiv. The internship&rsquo;s primary focus would be to assist in the data collection process, model development, and organizing the Kaggle competition. Additionally, the intern would contribute to writing an academic paper targeting an ML-focused journal to report the project&rsquo;s results and implications.</p>
+<h2 id="project-timeline">Project Timeline</h2>
+<ol>
+<li>Phase 1: Develop an EEG predictive model (1 month)</li>
+<li>Phase 2: Begin human data collection and establish baselines (1 month)</li>
+<li>Phase 3: Train the contrastive model as data is collected, and monitor progress (3 months)</li>
+<li>Phase 4: Evaluate the project&rsquo;s success and revise the data collection process, if necessary (1 month)</li>
+</ol>
+<p>Total project duration: 6 months</p>
+<h2 id="advancing-emotivs-vision-for-brain-computer-interfaces-and-conclusion">Advancing Emotiv&rsquo;s Vision for Brain-Computer Interfaces and Conclusion</h2>
+<p>The successful development of a joint text-EEG embedding model has the potential to advance Emotiv&rsquo;s leadership in brain-computer interface technology. By connecting human thought to computers, AI, and to each other, Emotiv will be ideally positioned to capitalize on the growing market for personalized AI assistants and innovative BCI applications.</p>
+<p>In conclusion, this proposal outlines a plan to develop a joint text-EEG embedding model using Emotiv EEG headsets, with the ultimate goal of aligning machine learning models with human values and creating more personalized AI assistants. By publicly releasing the dataset and initial model, we aim to encourage research and innovation in this area, as well as generate interest in Emotiv&rsquo;s products. We believe this collaboration will be mutually beneficial and result in significant advancements in the fields of AI and brain-computer interfaces.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu020812323d837f54ec864b63b3959ba5_316586_270x270_fill_q90_lanczos_center.JPG" alt="Scott Viteri">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="http://scottviteri.github.io/">Scott Viteri</a></h5>
+      <h6 class="card-subtitle">PhD Candidate in Computer Science</h6>
+      <p class="card-text">I am a PhD candidate at the 
+<a href="https://centaur.stanford.edu/" target="_blank" rel="noopener">Center for Automated Reasoning</a> at Stanford University, under the guidance of Prof. 
+<a href="https://theory.stanford.edu/~barrett/" target="_blank" rel="noopener">Clark Barrett</a>. My research focuses on improving the prosocial tendencies of language models (LMs) through a series of unique developmental approaches. This includes the introduction of communication channels during autoregressive training (akin to a kindergarten setting), allowing a parent LM to guide a child LM by curating its training data, and enhancing human feedback on LMs via a combined embedding of EEG data and speech.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:sviteri@stanford.edu" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/scott_viteri" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/scottviteri" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/files/Scott_Viteri_Curriculum_Vitae.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2024 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

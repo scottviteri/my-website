@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talks | Scott Viteri</title>
+    <link>http://scottviteri.github.io/talk/</link>
+      <atom:link href="http://scottviteri.github.io/talk/index.xml" rel="self" type="application/rss+xml" />
+    <description>Talks</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2024</copyright><lastBuildDate>Thu, 02 Nov 2023 12:00:00 -1300</lastBuildDate>
+    <image>
+      <url>http://scottviteri.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Talks</title>
+      <link>http://scottviteri.github.io/talk/</link>
+    </image>
+    
+    <item>
+      <title>Ontology Indentification and Utility Functions</title>
+      <link>http://scottviteri.github.io/talk/sts_lecture/</link>
+      <pubDate>Thu, 02 Nov 2023 12:00:00 -1300</pubDate>
+      <guid>http://scottviteri.github.io/talk/sts_lecture/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract:&lt;/h2&gt;
+&lt;p&gt;For STS 10SI &amp;ndash; Intro to AI Alignment in Winter 2023 I talked eliciting latent knowledge, cooperative inverse reinforcement learning, and shard theory. First I introduce the ELK problem as formulated by Paul Christiano and I go through the main proposals and counterexamples from the 
+&lt;a href=&#34;https://docs.google.com/document/d/1WwsnJQstPq91_Yh-Ch2XRL8H_EpsnjrC1dwZXR37PC8/edit#heading=h.kkaua0hwmp1d&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ELK document&lt;/a&gt;. Then we introduce inverse reinforcement learning, cooperative inverse reinforcement learning, and their relationship to the alignment problem. We proceed with a discussion of whether humans can be thought of as having utility functions, leading into a conversation about Shard theory. Lastly, we talk about similarities between the limbic-cortex relationship and the alignment problem, and frame utility functions as a story the brain tells about itself. Slides 
+&lt;a href=&#34;https://docs.google.com/presentation/d/1xqwf099kLXGqkgX5VUHMoIerAUS-Th90SMNZjIH6Bkg/edit?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;iframe
+  src=&#34;https://stanford.zoom.us/rec/play/s0Hd83CFErGM6F_Uv3Y-gewFUjSgRKTEx8cDDo6uTsBvaL9J_RBJuSFYLTHiQQ6UKJuX112lTV7GanR_.K3cV7GDy-kkDRo2-?canPlayFromShare=true&amp;from=share_recording_detail&amp;continueMode=true&amp;componentName=rec-play&amp;originRequestUrl=https%3A%2F%2Fstanford.zoom.us%2Frec%2Fshare%2FIjaUw43rXg4l4vzE_4AJ7cUjDCbIeCZznLrYlWiKq26RdO2i6oPEuWsbbq7pdfY9.7fNlXx-9nkQQwauH&#34;
+  width=&#34;640&#34;
+  height=&#34;480&#34;
+  allow=&#34;autoplay; fullscreen;&#34;
+&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Computation, Communication, and Ontology Maps</title>
+      <link>http://scottviteri.github.io/talk/topos_talk/</link>
+      <pubDate>Mon, 27 Jun 2022 12:00:00 -1300</pubDate>
+      <guid>http://scottviteri.github.io/talk/topos_talk/</guid>
+      <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract:&lt;/h2&gt;
+&lt;p&gt;How can we create intelligent systems that retain and expand into that which we find valuable in the universe? During this talk I will present my own thoughts based on ontology mapping, and I will communicate why I believe that mathematicians who think about systemic interactions are in an especially good place to answer this important question. I will start with a framework in which read-eval-print loops (repls) form a basis for reasoning about agents and computation in general. Then I will build ontology maps as an alignment framework on top of repls, and discuss its implications. Lastly I will invite discussion on what we might want out of the future, and talk about my thoughts on the central role of communication and its relation to both repls and ontology maps.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/WnvbPXykk8Y&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+  </channel>
+</rss>

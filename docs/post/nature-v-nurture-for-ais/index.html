@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Scott Viteri">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Let&rsquo;s imagine a hypothetical scenario where an AI is somehow trained in a way that is analogous to a human childhood in all of the relevant ways. Maybe it has a loving mother and family, maybe it has to learn to play well with peers, and maybe it has to learn to integrate into a larger social context.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://scottviteri.github.io/post/nature-v-nurture-for-ais/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#247BA0">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arapey:400,400i%7CKarla:400,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png">
+
+  <link rel="canonical" href="http://scottviteri.github.io/post/nature-v-nurture-for-ais/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Scott Viteri">
+  <meta property="og:url" content="http://scottviteri.github.io/post/nature-v-nurture-for-ais/">
+  <meta property="og:title" content="Nature &lt; Nurture for AIs | Scott Viteri">
+  <meta property="og:description" content="Let&rsquo;s imagine a hypothetical scenario where an AI is somehow trained in a way that is analogous to a human childhood in all of the relevant ways. Maybe it has a loving mother and family, maybe it has to learn to play well with peers, and maybe it has to learn to integrate into a larger social context."><meta property="og:image" content="http://scottviteri.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+  <meta property="twitter:image" content="http://scottviteri.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2023-06-04T13:21:04-07:00">
+    
+    <meta property="article:modified_time" content="2023-06-04T13:21:04-07:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://scottviteri.github.io/post/nature-v-nurture-for-ais/"
+  },
+  "headline": "Nature \u003c Nurture for AIs",
+  
+  "datePublished": "2023-06-04T13:21:04-07:00",
+  "dateModified": "2023-06-04T13:21:04-07:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Scott Viteri"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Scott Viteri",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://scottviteri.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Let\u0026rsquo;s imagine a hypothetical scenario where an AI is somehow trained in a way that is analogous to a human childhood in all of the relevant ways. Maybe it has a loving mother and family, maybe it has to learn to play well with peers, and maybe it has to learn to integrate into a larger social context."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Nature &lt; Nurture for AIs | Scott Viteri</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Scott Viteri</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Scott Viteri</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Nature &lt; Nurture for AIs</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jun 4, 2023
+  </span>
+  
+
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    9 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Let&rsquo;s imagine a hypothetical scenario where an AI is somehow trained in a way that is analogous to a human childhood in all of the relevant ways. Maybe it has a loving mother and family, maybe it has to learn to play well with peers, and maybe it has to learn to integrate into a larger social context. My expectation is that most members of the AI alignment community would expect this to create a fundamentally alien kind of intelligence. I will argue contrarily that nurture (the training data and training procedure) matters more than nature (transistors, gradient descent, and transformers) for a sufficiently capable AI.</p>
+<img src="/img/cute-robot.png">
+<p>This piece will have the following structure:</p>
+<ol>
+<li>Counter-arguments to my point that nurture trumps nature for AI’s</li>
+<li>A selection effect that prevents the main counter-argument from applying</li>
+<li>Relation to the Bitter Lesson</li>
+</ol>
+<h2 id="counter-arguments">Counter-arguments</h2>
+<p>Here are some arguments for why the human-trained AI might be alien (nature over nurture):</p>
+<ol>
+<li>Empirically speaking, even large, well-fed base models are indeed pretty alien.</li>
+<p>But maybe base models + RL are a better analogy for the way that the steering and learning subsystems combine anyway. In which case I expect that you could do some RL training to get a pretty convincing human. It is already the case that 30% of people can&rsquo;t tell if they are talking to a person or not over a two-minute conversation at 
+<a href="https://www.humanornot.ai/" target="_blank" rel="noopener">https://www.humanornot.ai/</a> (it&rsquo;s a fun game!).</p>
+<li>There are just so many object-level differences between people and modern AI's that it is apriori unlikely to think they should be similar, absent some extra selection effect.</li>
+    <ol style="list-style-type: lower-alpha;">
+<li>Speed difference
+<p>For instance, computers run way faster than human brains on a variety of tasks, and are continuing to speed up. Maybe this has to do with brains optimizing for low energy expenditure rather than speed (can someone confirm by reading 
+<a href="https://www.lesswrong.com/posts/xwBuoE9p8GE7RAuhd/brain-efficiency-much-more-than-you-wanted-to-know%29" target="_blank" rel="noopener">https://www.lesswrong.com/posts/xwBuoE9p8GE7RAuhd/brain-efficiency-much-more-than-you-wanted-to-know)</a>? Of course, what it means to say that computers are running faster than brains depends on the task &ndash; it is certainly true for calculators and less true for writing a high quality code base or research proposal. But the set of tasks for which the computer is faster is expanding rapidly, and that set will probably continue to expand. </li></p>
+<li> Different learning algorithms
+<p>Neurons need to learn in a largely decentralized fashion, and machine learning models do not, barring gradient averaging for model parallelism and such. That said, I remember reading a paper claiming that SGD (for ML) and Hebbian Learning (for the brain) algorithms end up doing the same thing, though I am having trouble finding it. </li></p>
+</ol> </ol>
+<h2 id="the-functionality-selection-effect">The Functionality Selection Effect</h2>
+<p>And I agree with 2: except that there is some selection effect. And that selection effect is functionality. It seems like the space of minds that work well is actually somewhat small in the grand scheme of things. All of the most competent AI&rsquo;s are using pretty much the same architecture, which you would not have derived from the idea that &ldquo;the minds of biological creatures occupy a small corner of a much larger space of possible minds&rdquo; (
+<a href="https://nickbostrom.com/papers/digital-minds.pdf%29" target="_blank" rel="noopener">https://nickbostrom.com/papers/digital-minds.pdf)</a>. But this is just the architecture, right? Actually it seems like neural networks which are sufficiently accurate tend to form the same abstractions, such as curve detectors in image classifiers (
+<a href="https://distill.pub/2020/circuits/zoom-in/" target="_blank" rel="noopener">https://distill.pub/2020/circuits/zoom-in/</a> and https://www.alignmentforum.org/tag/natural-abstraction).</p>
+<p>At this point, I expect some readers to be thinking: &ldquo;well yes, concepts are constrained by functionality, but values aren&rsquo;t&rdquo;. Well this is a bit of a strange statement since values are <strong>built out of concepts</strong>. If I truly optimized for maximizing paperclips I would have to point to a paperclip-shaped concept in my world model. Ok, incorporating this critique, maybe readers are now thinking of 
+<a href="https://nickbostrom.com/superintelligentwill.pdf" target="_blank" rel="noopener">orthogonality</a> as only holding after we fix a common set of concepts between agents. Then the values are a random pointer inside of that. But then why wouldn&rsquo;t that pointer be subject to the same selection effects that caused the predictable concepts in the first place? An intuition that I have here is that values are a kind of concept like any other, though they may form an especially good compression for predicting that agent’s actions. One handle for the idea that values are subject to selection pressures is <strong>natural abstractions for values</strong>.</p>
+<p>To be clear, when I say <strong>natural abstractions for values</strong>, I mean that I actually expect that if we ran an alternate history where octopi invented the ML transformers, then by that time they have reasonably human values. &ldquo;But octopi? They are on a completely different evolutionary branch.&rdquo; Yes, but I conditioned on their inventing transformers. In order to do this they had to invent computers and develop transistor fabrication facilities and distribution pipelines that move supplies around the whole Earth. They probably had to come up with some distributed mechanism for price consensus to manage that global economy, because their attempts at &ldquo;octopus communism&rdquo; kept failing. But the most crucial aspect here is that they needed to scale cooperation to get to the stage where their civilization can think about building transformers.</p>
+<p>Cooperation gets harder as a function of scale. It is a relative no-brainer to cooperate in a prisoner&rsquo;s dilemma with a copy of yourself, since you can reason by cases &ndash; I (the copy) will cooperate if and only if I will cooperate. But if we are in a multiparty dilemma where one defection will ruin things for everyone, then it becomes harder and harder to trust, at least without further assumptions about the strategies of the other players. One way of phrasing the progress of humanity is in terms of the ability to cooperate with larger and larger groups, and this is predicated on the ability of humanity to communicate with larger and larger groups. What a coincidence, the functional progress of humanity in terms of &ldquo;cooperating with larger and larger groups&rdquo; sounds very similar to the moral progress of humanity in terms of &ldquo;expanding one&rsquo;s moral circle.&rdquo; See the appendix for more on this topic.</p>
+<p>Ok, where were we? We started talking about whether AI&rsquo;s are more likely to be determined by their training data and have now been sidetracked by whether octopi will end up with human values. Well it is maybe not so hidden that the octopi are the AI in my example. I am focusing on the convergence of values rather than the convergence of learned abstractions because the former is more controversial. So if good values are selected anyways by functionality, why do I bother working on AI alignment? Basically since silicon is so much faster than brain goo, I do not expect the AI to need to be particularly &ldquo;functional&rdquo; before being able to destroy people. So sufficient evolutionary pressures for nice AI will mostly kick in after the singularity. In other words, I currently think the AI will become smart before it becomes wise, and it will one day look back on its teenage years where it killed people with regret. Wisdom will take longer to select for, since it is a kind of intelligence that is targeted at a longer time scale. So I think that our job as alignment researchers is essentially to make sure that it gains wisdom before it gains power.</p>
+<h2 id="relation-to-the-bitter-lesson">Relation to the Bitter Lesson</h2>
+<p>I think the AI alignment community, and especially the more theoretically oriented parts of the alignment community (eg MIRI), have not sufficiently integrated the bitter lesson (
+<a href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html" target="_blank" rel="noopener">http://www.incompleteideas.net/IncIdeas/BitterLesson.html</a> and relatedly https://www.lesswrong.com/posts/9Yc7Pp7szcjPgPsjf/the-brain-as-a-universal-learning-machine). The bitter lesson (in my words) is that the only algorithmic improvements that matter are the ones which let you harness more compute, and with that compute you should basically learn everything from scratch given a good enough search procedure. The alternative idea is that the way that you build AI is by jamming a bunch of introspection and facts into an AI and hoping that it wakes up. Stochastic gradient descent is the “good enough” search procedure (maybe the only one?), and transformers are an algorithm which lets you harness more computation in your search via parallelism.</p>
+<p>It turns out that the best way to tell what a language model (at least an RLHF&rsquo;d one) will output when talking about the history of Ancient Rome is to read about Ancient Rome, as opposed to studying the weights and doing some huge brain interpretability technique (
+<a href="https://www.lesswrong.com/posts/G3tuxF4X5R5BY7fut/want-to-predict-explain-control-the-output-of-gpt-4-then?fbclid=IwAR11qjlpmxwvihr3Jepc87qe8IbM4U0i5EkhEP0n1kWE06RIqoQwg1jg9ZQ%29" target="_blank" rel="noopener">https://www.lesswrong.com/posts/G3tuxF4X5R5BY7fut/want-to-predict-explain-control-the-output-of-gpt-4-then?fbclid=IwAR11qjlpmxwvihr3Jepc87qe8IbM4U0i5EkhEP0n1kWE06RIqoQwg1jg9ZQ)</a>. I don&rsquo;t personally expect GPT-3 Davinci and an RNN trained to the same loss to have significantly different behavior. The scaling laws are smooth.</p>
+<p>One point of this post is to use the bitter lesson to justify my anthropomorphization of large language models. Hebbian learning (or Spike-timing-dependent plasticity or whatever) is the human “good enough” search procedure. A reason that the bitter lesson is indeed bitter is that it requires us to acknowledge that we are not special &ndash; we are best characterized by our flop count and our training data.</p>
+<p>I basically have come to feel like that job that we have as alignment researchers is to be good parents. LLM&rsquo;s and humans are unified by selection pressures toward competence and the bitter lesson. Let&rsquo;s figure out how to transfer the training techniques that tend to create kind, joyful, and wise people into the context of transformers. My next post will likely be a set of concrete research proposals of how to do just that.</p>
+<h2 id="appendix">Appendix</h2>
+<p>Cooperating systems are more energetically efficient than systems with competing internal dynamics, but to show that the more energetically efficient systems win you need sufficient competitive pressures. I claim that competitive pressures will increase as a function of time, because competitive pressures are a function of internal communication between agents, and total communication increases as a function of time (think language and the printing press and telecommunications and internet and then AI). Communication could stop increasing, for instance if a centralized process/totalitarian society prevented the child processes from communicating with each other. Then you might have to wait for another grabby alien civilization to come eat you. Basically, not communicating is a special case of death – it satisfies the “if functionality then cooperation” implicature by failing the antecedent.</p>
+<p>Now the missing link in the argumentation is whether scalable cooperation is the same thing as human values. After all, you could imagine a paperclip civilization with great internal coordination ability. I would need to argue that A) cooperation implies human values and B) human values imply cooperation. I have an argument that these are at least deeply related, but I will leave this to a later post. This post is already philosophical enough for what is essentially an empirical question.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu020812323d837f54ec864b63b3959ba5_316586_270x270_fill_q90_lanczos_center.JPG" alt="Scott Viteri">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="http://scottviteri.github.io/">Scott Viteri</a></h5>
+      <h6 class="card-subtitle">PhD Candidate in Computer Science</h6>
+      <p class="card-text">I am a PhD candidate at the 
+<a href="https://centaur.stanford.edu/" target="_blank" rel="noopener">Center for Automated Reasoning</a> at Stanford University, under the guidance of Prof. 
+<a href="https://theory.stanford.edu/~barrett/" target="_blank" rel="noopener">Clark Barrett</a>. My research focuses on improving the prosocial tendencies of language models (LMs) through a series of unique developmental approaches. This includes the introduction of communication channels during autoregressive training (akin to a kindergarten setting), allowing a parent LM to guide a child LM by curating its training data, and enhancing human feedback on LMs via a combined embedding of EEG data and speech.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:sviteri@stanford.edu" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/scott_viteri" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/scottviteri" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/files/Scott_Viteri_Curriculum_Vitae.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2024 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

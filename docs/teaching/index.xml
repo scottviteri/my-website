@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Teachings | Scott Viteri</title>
+    <link>http://scottviteri.github.io/teaching/</link>
+      <atom:link href="http://scottviteri.github.io/teaching/index.xml" rel="self" type="application/rss+xml" />
+    <description>Teachings</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2024</copyright><lastBuildDate>Wed, 01 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://scottviteri.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Teachings</title>
+      <link>http://scottviteri.github.io/teaching/</link>
+    </image>
+    
+    <item>
+      <title>CS 362: Research in AI Alignment</title>
+      <link>http://scottviteri.github.io/teaching/courses/cs362/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://scottviteri.github.io/teaching/courses/cs362/</guid>
+      <description>&lt;div style=&#34;display: flex; flex-direction: row;&#34;&gt;
+  &lt;div style=&#34;flex: 1;&#34;&gt;
+&lt;h2 id=&#34;course-information&#34;&gt;Course Information&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Instructor Name(s)&lt;/em&gt;: Scott Viteri&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Teaching Assistants&lt;/em&gt;: Victor Lecomte, Gabe Mukobi, Peter Chatain&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Course Faculty Sponsor&lt;/em&gt;: Clark Barrett&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Lecture&lt;/em&gt;: Monday 3:00-4:30pm, B067 Mitchell Earth Science (In-person only)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Optional Office Hours&lt;/em&gt;: Large Language Model productivity meetings at 1-2PM in Gates 200&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Graduate-level course or advanced undergraduates (contact course instructor)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3 Units, Spring 2023, 
+&lt;a href=&#34;https://explorecourses.stanford.edu/search?q=CS&amp;#43;362&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ExploreCourses&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;flex: 0 0 30%; margin-left: 20px;&#34;&gt;
+&lt;img src=&#34;http://scottviteri.github.io/img/cs362.png&#34; alt=&#34;AI Alignment&#34; style=&#34;width: 200px;&#34;&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;course-description&#34;&gt;Course Description&lt;/h2&gt;
+&lt;p&gt;In this course we will explore the current state of research in the field of AI alignment, which seeks to bring increasingly intelligent AI systems in line with human values and interests. The purpose of this course is to encourage the development of new ideas in this field, where a dominant paradigm has not yet been established. The format will be weekly lectures in which speakers present their current research approaches.&lt;/p&gt;
+&lt;p&gt;The assignment structure will be slightly unusual: each week students will have a choice between a problem set and a short research assignment based on the weekly guest speaker’s research area. For the research assignment, students will start with the abstract of a relevant AI alignment paper or blog post and create a blog post or Github repository describing how they would continue the paper. The final weekly assignment will be an extension of one of the previous weeks’ work. Therefore this course requires research experience, preferably using mathematical and programming tools (e.g. Python, PyTorch, calculus), and is a graduate level course, open to advanced undergraduates.&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites:&lt;/h2&gt;
+&lt;p&gt;Any one of the following: CS223a, CS224n, CS224w, CS224u, CS227b, CS228, CS229, CS229t, CS229m, CS231a, CS231n, CS234, CS236, CS237a, CS281&lt;/p&gt;
+&lt;p&gt;In addition to the above, strong ability to do independent research will be necessary, preferably using mathematical and programming tools (e.g. Python, PyTorch, calculus).&lt;/p&gt;
+&lt;h2 id=&#34;syllabus&#34;&gt;Syllabus&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Date&lt;/th&gt;
+&lt;th&gt;Week&lt;/th&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Topic&lt;/th&gt;
+&lt;th&gt;Suggested Assignment Prompt&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;April 3 (Mon)&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Scott Viteri&lt;/td&gt;
+&lt;td&gt;Overview of Course and AI Safety&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://wp.nyu.edu/arg/why-ai-safety/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bowman 2022&lt;/a&gt;, 
+&lt;a href=&#34;https://bounded-regret.ghost.io/more-is-different-for-ai/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Steinhardt 2022&lt;/a&gt;, 
+&lt;a href=&#34;https://www.youtube.com/watch?v=UbruBnv3pZU&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Carlsmith 2022&lt;/a&gt;, 
+&lt;a href=&#34;https://hai.stanford.edu/events/hai-weekly-seminar-vael-gates&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gates 2022&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;April 10&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;Adam Gleave (UC Berkeley)&lt;/td&gt;
+&lt;td&gt;Inverse Reinforcement Learning&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://arxiv.org/pdf/2203.11409.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gleave, Toyer 2022&lt;/a&gt;, 
+&lt;a href=&#34;https://arxiv.org/pdf/2203.07472.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gleave 2022&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;April 17&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;Andrew Critch (UC Berkeley)&lt;/td&gt;
+&lt;td&gt;Multiagent problems&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.cambridge.org/core/journals/journal-of-symbolic-logic/article/abs/parametric-resourcebounded-generalization-of-lobs-theorem-and-a-robust-cooperation-criterion-for-opensource-game-theory/16063EA7BFFEE89438631B141E556E79&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Critch 2019&lt;/a&gt;, 
+&lt;a href=&#34;https://arxiv.org/pdf/2012.14536.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fickinger, Zhuang, Critch et al 2020&lt;/a&gt;, 
+&lt;a href=&#34;https://arxiv.org/pdf/1609.03543.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Garrabrandt, Critch et al 2016&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;April 24&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;Andy Jones (Anthropic)&lt;/td&gt;
+&lt;td&gt;Empirical alignment - interpretability&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://arxiv.org/abs/2112.00861&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Askell 2021&lt;/a&gt;, 
+&lt;a href=&#34;https://transformer-circuits.pub/2021/framework/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Elhage, Nanda 2021&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;May 1&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;Dan Hendrycks (Center for AI Safety)&lt;/td&gt;
+&lt;td&gt;Robustness and Generalization in AI Systems&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://arxiv.org/abs/2109.13916&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hendrycks 2022&lt;/a&gt;, 
+&lt;a href=&#34;https://arxiv.org/abs/2009.03300&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hendrycks 2021a&lt;/a&gt;, 
+&lt;a href=&#34;https://arxiv.org/abs/2006.16241&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hendrycks 2021b&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;May 8&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;Alex Turner (UC Berkeley)&lt;/td&gt;
+&lt;td&gt;Shard theory&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.alignmentforum.org/posts/pdaGN6pQyQarFHXF4/reward-is-not-the-optimization-target&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Turner 2022&lt;/a&gt;, 
+&lt;a href=&#34;https://www.alignmentforum.org/posts/iCfdcxiyr2Kj8m8mT/the-shard-theory-of-human-values&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pope, Turner 2022&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;May 15&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;Laria Reynolds (Conjecture)&lt;/td&gt;
+&lt;td&gt;Empirical alignment research with LLM&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://arxiv.org/pdf/2102.07350.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Reynolds, McDonell 2021&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;May 22&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;John Wentworth (independent researcher)&lt;/td&gt;
+&lt;td&gt;Agent Foundations and Abstractions&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.lesswrong.com/posts/BzYmJYECAc3xyCTt6/the-plan-2022-update&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wentworth 2022a&lt;/a&gt;, 
+&lt;a href=&#34;https://www.lesswrong.com/s/TLSzP4xP42PPBctgw&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wentworth 2022b&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;May 29&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;Memorial Day — no class&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Jun 5&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;Evan Hubinger (Anthropic)&lt;/td&gt;
+&lt;td&gt;Mesa-Optimization and Inner Alignment&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://arxiv.org/abs/1906.01820&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hubinger, Mikulik et al 2019&lt;/a&gt;, 
+&lt;a href=&#34;https://www.alignmentforum.org/posts/fRsjBseRuvRhMPPE5/an-overview-of-11-proposals-for-building-safe-advanced-ai&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hubinger 2021&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>STS 20SI: Advanced AI Alignment</title>
+      <link>http://scottviteri.github.io/teaching/courses/sts20si/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>http://scottviteri.github.io/teaching/courses/sts20si/</guid>
+      <description>&lt;h2 id=&#34;course-information&#34;&gt;Course Information&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Course Coordinator&lt;/em&gt;: Gabriel Mukobi&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Faculty Sponsor&lt;/em&gt;: Paul N. Edwards (STS)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Content&lt;/em&gt;: This advanced course explores the frontier of current AI alignment research directions and helps students develop their own inside view on AI safety research. The course includes targeted readings, weekly group discussions, technical alignment exercises, and a final literature review or research proposal.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As a Discussion Facilitator for this course, I guided students through the complex issues surrounding AI alignment, helped them understand current research directions, and provided guidance on their projects.&lt;/p&gt;
+&lt;p&gt;For more information about the course, please visit the 
+&lt;a href=&#34;https://explorecourses.stanford.edu/search?view=catalog&amp;amp;filter-coursestatus-Active=on&amp;amp;page=0&amp;amp;catalog=&amp;amp;academicYear=&amp;amp;q=STS&amp;#43;20SI%3A&amp;#43;Advanced&amp;#43;AI&amp;#43;Alignment&amp;amp;collapse=&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;course page&lt;/a&gt; and the 
+&lt;a href=&#34;https://docs.google.com/document/d/1zDYtBpoJqTw7qwrfRd5hqyoiaQrfL6HSoFdKbEP21l0/edit#heading=h.o0d20s4gildq&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;syllabus&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AGI Safety Fundamentals: AI Alignment Course</title>
+      <link>http://scottviteri.github.io/teaching/courses/fundamentals/</link>
+      <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://scottviteri.github.io/teaching/courses/fundamentals/</guid>
+      <description>&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.min.js&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;course-information&#34;&gt;Course Information&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Course Organizer&lt;/em&gt;: Richard Ngo&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Content&lt;/em&gt;: The AGI Safety Fundamentals: Alignment Course provides a high-level understanding of the AI alignment problem and some of the key research directions which aim to solve it. The course consists of 7 weeks of readings and discussion sessions (plus one optional week introducing the fundamentals of machine learning), and a final project. No background machine learning knowledge is required, but participants are expected to have some fluency in basic statistics and mathematical notation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I had the opportunity to mentor for this program twice. For more information about the course, please visit the 
+&lt;a href=&#34;https://www.agisafetyfundamentals.com/ai-alignment-curriculum&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;official course page&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>STS 10SI: Introduction to AI Alignment</title>
+      <link>http://scottviteri.github.io/teaching/courses/sts10si/</link>
+      <pubDate>Mon, 28 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://scottviteri.github.io/teaching/courses/sts10si/</guid>
+      <description>&lt;h2 id=&#34;course-information&#34;&gt;Course Information&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Course Coordinator&lt;/em&gt;: Gabriel Mukobi&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Faculty Sponsor&lt;/em&gt;: Paul N. Edwards (STS)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Content&lt;/em&gt;: This 8-week course explores the pressing ethical questions about what will happen if AI systems aren’t aligned with our values. The course includes targeted readings, weekly group discussions, and an optional project. Basic knowledge about machine learning helps but is not required.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As a Discussion Facilitator for this course, I helped students understand the complex issues surrounding AI alignment, and provided guidance on their projects.&lt;/p&gt;
+&lt;p&gt;For more information about the course, please visit the 
+&lt;a href=&#34;https://explorecourses.stanford.edu/search?view=catalog&amp;amp;filter-coursestatus-Active=on&amp;amp;page=0&amp;amp;catalog=&amp;amp;academicYear=&amp;amp;q=STS&amp;#43;10SI%3A&amp;#43;Introduction&amp;#43;to&amp;#43;AI&amp;#43;Alignment&amp;amp;collapse=&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;course page&lt;/a&gt; and the 
+&lt;a href=&#34;https://docs.google.com/document/d/1NX0DlZRzD3NP7tBeLjMh76w7-w2s8SxV3wj0P7EYpKY/edit#&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;syllabus&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>http://scottviteri.github.io/teaching/index_/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://scottviteri.github.io/teaching/index_/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
