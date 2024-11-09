@@ -9,6 +9,8 @@ weight: 2
 showthedate: false
 ---
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.min.js"></script>
+
 ## Course Information
 
 * *Course Organizer*: Richard Ngo
