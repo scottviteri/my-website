@@ -3,7 +3,7 @@
 
 title: "Repls and Elk"
 subtitle: ""
-summary: ""
+summary: "Extends the REPL agent framework to propose a solution for ARC's Eliciting Latent Knowledge problem, learning an ontology map between machine and human state spaces."
 authors: []
 tags: []
 categories: []

@@ -18,14 +18,14 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: I am a PhD candidate at the [Center for Automated Reasoning](https://centaur.stanford.edu/) at Stanford University, under the guidance of Prof. [Clark Barrett](https://theory.stanford.edu/~barrett/). My research focuses on improving the prosocial tendencies of language models (LMs) through a series of unique developmental approaches. This includes the introduction of communication channels during autoregressive training (akin to a kindergarten setting), allowing a parent LM to guide a child LM by curating its training data, and enhancing human feedback on LMs via a combined embedding of EEG data and speech.
+bio: I am a PhD candidate at the [Center for AI Safety](https://aisafety.stanford.edu) at Stanford University, under the guidance of Prof. [Clark Barrett](https://theory.stanford.edu/~barrett/). I am interested in training AIs to be human-like both in terms of the concepts they contain, as well as the values they hold. I think the key to this lies in training language models to produce their own memory during training and to influence their future training data. In this vein, I have been optimizing pre-trained models to produce Chain-of-Thought reasoning which is informative to itself and to humans.
 
 interests:
 - AI Alignment
 - Large Language Models
+- Chain-of-Thought Reasoning
+- Reinforcement Learning
 - Interactive Theorem Proving
-- Evolving Prosociality in LM's
-- Geometric Algebra
 
 education:
   courses:
@@ -69,8 +69,8 @@ user_groups:
 - Visitors
 ---
 
-I am a CS PhD candidate at the [Center for Automated Reasoning](https://centaur.stanford.edu) at Stanford University, under the guidance of Prof. [Clark Barrett](https://theory.stanford.edu/~barrett). My researching revolves around producing [informative](https://arxiv.org/abs/2404.18988) and collaborative language models via reinforcement learning. My goal is to ensure that wisdom and intelligence arise in AIs at similar rates, unlike a broader trend in human societal history.
+I am a CS PhD candidate at the [Center for AI Safety](https://aisafety.stanford.edu) at Stanford University, under the guidance of Prof. [Clark Barrett](https://theory.stanford.edu/~barrett). I am interested in training AIs to be human-like both in terms of the concepts they contain, as well as the values they hold. I think the key to this lies in training the language model to produce its own memory during training and to influence its future training data. In this vein, I have been optimizing pre-trained models to produce Chain-of-Thought reasoning which is *informative* to itself and to humans. In the future, I am interested in using a similar blend of unsupervised learning and reinforcement learning towards active learning, in the hopes that this sets the preconditions to raise the AI like a child, and have that result in something child-like.
 
-During my PhD journey, my focus has evolved from formal verification and programming languages to AI alignment, prompted by my belief that robust AI represents a substantial existential threat to humanity. Prior to this, I majored in computer science and electrical engineering at MIT, contributing to AI and robotics research. After MIT, I explored interactive theorem proving at CMU with Simon Dedeo. During this period, I published research on the application of [abduction in mathematics](https://doi.org/10.1016/j.cognition.2022.105120) in the Cognition journal. I am currently in the 4th year of my PhD, where I have engaged in various projects related to SMT solving and interactive theorem proving. I have also probed into [ontology mapping](https://www.lesswrong.com/posts/C5PZNi5fueH2RC6aF/repl-s-and-elk) as a technique for targeted neural network interpretability.
+During my PhD, my focus has evolved from formal verification and programming languages to AI alignment. Prior to this, I majored in computer science and electrical engineering at MIT, contributing to AI and robotics research. After MIT, I explored interactive theorem proving at CMU with Simon Dedeo, publishing research on [abduction in mathematics](https://doi.org/10.1016/j.cognition.2022.105120) in the *Cognition* journal.
 
 My primary character trait is curiosity, and I really love math.

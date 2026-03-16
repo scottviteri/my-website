@@ -3,7 +3,7 @@
 
 title: "Democratic AI Constitution: Round-Robin Debate and Synthesis"
 subtitle: ""
-summary: ""
+summary: "Proposes using GPT-4 to generate group-specific AI constitutions for diverse demographic and philosophical groups, then having those constitutions debate in a round-robin competition to produce a democratic AI governance framework."
 authors: []
 tags: []
 categories: []

@@ -3,7 +3,7 @@
 
 title: "Clifford Algebra and SageMath Tutorial"
 subtitle: ""
-summary: ""
+summary: "A tutorial on how to use Clifford Algebras and SageMath to represent geometric objects as vectors in an algebraic manner amenable to direct computation."
 authors: []
 tags: []
 categories: []
@@ -28,6 +28,81 @@ image:
 projects: []
 ---
 
+<style>
+/* Override notebook inline styles for dark theme compatibility */
+.article-container div[style*="margin:30px"] {
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+}
+.article-container div[style*="margin:30px"] p span,
+.article-container div[style*="margin:30px"] h1 span,
+.article-container div[style*="margin:30px"] h2 span,
+.article-container div[style*="margin:30px"] h3 span,
+.article-container div[style*="margin:30px"] li span {
+  color: #e0e0e0 !important;
+}
+.article-container div[style*="margin:30px"] a span {
+  color: #6db3f2 !important;
+}
+.article-container [style*="background-color:white"] {
+  background-color: transparent !important;
+}
+.article-container [style*="background-color: white"] {
+  background-color: transparent !important;
+}
+.article-container pre, .article-container code {
+  background-color: #0d1117 !important;
+  color: #c9d1d9 !important;
+}
+.article-container .CodeMirror {
+  background-color: #0d1117 !important;
+  color: #c9d1d9 !important;
+}
+.article-container .CodeMirror .cm-variable { color: #c9d1d9 !important; }
+.article-container .CodeMirror .cm-keyword { color: #ff7b72 !important; }
+.article-container .CodeMirror .cm-string { color: #a5d6ff !important; }
+.article-container .CodeMirror .cm-comment { color: #8b949e !important; }
+.article-container .CodeMirror .cm-number { color: #79c0ff !important; }
+.article-container .CodeMirror .cm-builtin { color: #d2a8ff !important; }
+.article-container .CodeMirror .cm-operator { color: #ff7b72 !important; }
+.article-container div[style*="color:#303F9F"] {
+  color: #6db3f2 !important;
+}
+.article-container div[style*="background-color:#F5F5F5"],
+.article-container div[style*="background-color: #F5F5F5"] {
+  background-color: #0d1117 !important;
+}
+/* Output cell backgrounds */
+.article-container div[style*="background-color:#fff"],
+.article-container div[style*="background-color: #fff"] {
+  background-color: #0d1117 !important;
+  color: #c9d1d9 !important;
+}
+/* Output label color */
+.article-container div[style*="color:#D84315"] {
+  color: #ff7b72 !important;
+}
+/* KaTeX math rendering */
+.article-container .katex,
+.article-container .katex .mord,
+.article-container .katex .mbin,
+.article-container .katex .mrel,
+.article-container .katex .mopen,
+.article-container .katex .mclose,
+.article-container .katex .mpunct,
+.article-container .katex .minner {
+  color: #e0e0e0 !important;
+}
+/* Output text */
+.article-container div[style*="overflow-x:auto"] {
+  color: #c9d1d9 !important;
+}
+.article-container div[style*="overflow-x:auto"] span {
+  color: #c9d1d9 !important;
+}
+</style>
 
 <html>
 <head><meta charset="utf-8" />

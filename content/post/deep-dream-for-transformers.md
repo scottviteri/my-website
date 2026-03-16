@@ -3,7 +3,7 @@
 
 title: "Deep Dream for Transformers"
 subtitle: ""
-summary: ""
+summary: "An interactive D3.js visualization of GPT-2's model structure that lets users explore neuron-level explanations across layers."
 authors: []
 tags: []
 categories: []

@@ -3,7 +3,7 @@
 
 title: "Be the Agi"
 subtitle: ""
-summary: ""
+summary: "Proposes enhancing human intelligence via brain-computer interfaces by connecting electrodes to an artificial neural network, potentially enabling gradual mind uploading and helping humans stay competitive during the AGI risk period."
 authors: []
 tags: []
 categories: []

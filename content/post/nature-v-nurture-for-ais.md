@@ -3,7 +3,7 @@
 
 title: "Nature < Nurture for AIs"
 subtitle: ""
-summary: ""
+summary: "Argues that nurture (training data and procedure) matters more than nature (architecture) for sufficiently capable AIs, and that the Bitter Lesson implies convergent abstractions and even convergent values."
 authors: []
 tags: []
 categories: []

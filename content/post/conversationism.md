@@ -3,7 +3,7 @@
 
 title: "Conversationism"
 subtitle: ""
-summary: ""
+summary: "Traces an intellectual path from ontology maps to cyborgism via Neuralink, arguing that augmenting humans into superintelligence is more promising than trying to align a separate external superintelligence."
 authors: []
 tags: []
 categories: []

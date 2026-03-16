@@ -3,7 +3,7 @@
 
 title: "Repls"
 subtitle: ""
-summary: ""
+summary: "Introduces a formal type-theoretic framework for agents based on read-eval-print loops, defining agents as 3-tuples of Read, Eval, and Print functions."
 authors: []
 tags: []
 categories: []
