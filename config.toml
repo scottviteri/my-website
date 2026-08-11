@@ -9,7 +9,7 @@ title = "Scott Viteri"
 
 # The URL of your site.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-baseurl = "http://scottviteri.github.io/"
+baseurl = "https://scottviteri.github.io/"
 #publishDir = "../scottviteri.github.io"
 
 # Enter a copyright notice to display in the site footer.
